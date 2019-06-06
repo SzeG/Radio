@@ -32,6 +32,7 @@ public class JavaApplication151 {
 
             for (int i = 0; i < osszsor; i++) {
                 x[i] = okos.readLine();
+                System.out.println(x[i]);
 
             }
         } catch (FileNotFoundException ex) {
@@ -39,6 +40,7 @@ public class JavaApplication151 {
         } catch (IOException ex) {
             System.out.println("Hiba az olvasásnál!");
         }
+        
     }
     
 }
