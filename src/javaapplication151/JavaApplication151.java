@@ -20,26 +20,7 @@ public class JavaApplication151 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-         String[] x = new String[1000];
-        try {
-            String s;
-            int osszsor;
-            FileReader buta = new FileReader("musor.txt");
-            BufferedReader okos = new BufferedReader(buta);
-            s = okos.readLine();
-            s = s.trim();
-            osszsor = Integer.parseInt(s);
-
-            for (int i = 0; i < osszsor; i++) {
-                x[i] = okos.readLine();
-                System.out.println(x[i]);
-
-            }
-        } catch (FileNotFoundException ex) {
-            System.out.println("Nincs ilyen file!");
-        } catch (IOException ex) {
-            System.out.println("Hiba az olvasásnál!");
-        }
+        
         
     }
     
