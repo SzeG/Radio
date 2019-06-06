@@ -21,5 +21,7 @@ public class JavaApplication151 {
      */
     public static void main(String[] args) {
         
+        
+    }
     
 }
