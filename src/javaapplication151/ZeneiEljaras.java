@@ -33,10 +33,10 @@ public class ZeneiEljaras {
             buta = new FileReader("musor.txt");
             BufferedReader okos = new BufferedReader(buta);
             for (int i = 0; i < 1000; i++) {
+                beolv = okos.readLine();
                 if (beolv == null) {
                     break;
                 }
-                beolv = okos.readLine();
                 String[] szamok = beolv.split(" ");
                 String[] cim = beolv.split(":");
                 String[] eloado = cim[0].split(" ");
