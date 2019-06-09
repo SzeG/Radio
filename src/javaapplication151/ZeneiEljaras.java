@@ -42,7 +42,7 @@ public class ZeneiEljaras {
                 String[] szamok = beolv.split(" ");
                 String[] cim = beolv.split(":");
                 String[] eloado = cim[0].split(" ");
-                ZeneiAgy za = new ZeneiAgy(Integer.parseInt(szamok[0]), Integer.parseInt(szamok[1]) * 60 + Integer.parseInt(szamok[2]), eloado[3], cim[1], Integer.parseInt(szamok[0]));
+                ZeneiAgy za = new ZeneiAgy(Integer.parseInt(szamok[0]), Integer.parseInt(szamok[1]) * 60 + Integer.parseInt(szamok[2]),eloado[3]/*osszefuzo(eloado)*/, cim[1], kezdesekbeall );
                 adas.add(za);
             }
             buta.close();
@@ -58,5 +58,21 @@ public class ZeneiEljaras {
             System.out.println(adas.get(i).toString());
         }
     }
+    /*public String osszefuzo(String[] eloado){
+        if (eloado[4]==null) {
+        return eloado[3];
+        }else{
+        return eloado[3].concat(eloado[4]);
+        }
+        
+    }*/
+    /*public void kezdesekbeall(){
+        for (int i = 0; i < adas.size(); i++) {
+            if () {
+                
+               
+            }
+        }
+    }*/
   
 }
