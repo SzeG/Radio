@@ -55,7 +55,7 @@ public class ZeneiEljaras {
     }
     public void összkiiro(){
         for (int i = 0; i < adas.size(); i++) {
-            System.out.println(adas.get(i));
+            System.out.println(adas.get(i).toString());
         }
     }
   
