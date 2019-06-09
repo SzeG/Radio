@@ -48,7 +48,11 @@ public class ZeneiAgy {
     public void setKezdido(Integer kezdido) {
         this.kezdido = kezdido;
     }
-    
+
+    @Override
+    public String toString(){
+    return ado+" "+idotartam+"mp "+eloado+": "+cim+" "+kezdido;
+    }
     
     
 }
