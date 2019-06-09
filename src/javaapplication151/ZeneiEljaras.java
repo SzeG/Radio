@@ -29,14 +29,16 @@ public class ZeneiEljaras {
 
         FileReader buta;
         String beolv = " ";
+        String s;
+        Integer osszsor;
         try {
             buta = new FileReader("musor.txt");
             BufferedReader okos = new BufferedReader(buta);
-            for (int i = 0; i < 1000; i++) {
+            s = okos.readLine();
+            s = s.trim();
+            osszsor = Integer.parseInt(s);
+            for (int i = 0; i < osszsor; i++) {
                 beolv = okos.readLine();
-                if (beolv == null) {
-                    break;
-                }
                 String[] szamok = beolv.split(" ");
                 String[] cim = beolv.split(":");
                 String[] eloado = cim[0].split(" ");
