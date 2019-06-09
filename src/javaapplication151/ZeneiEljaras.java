@@ -53,10 +53,10 @@ public class ZeneiEljaras {
         }
 
     }
-    public void kiiro(){
+    public void összkiiro(){
         for (int i = 0; i < adas.size(); i++) {
-            System.out.println(?);
+            System.out.println(adas.get(i));
         }
     }
-
+  
 }
