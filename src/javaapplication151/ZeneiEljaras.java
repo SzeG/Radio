@@ -53,5 +53,10 @@ public class ZeneiEljaras {
         }
 
     }
+    public void kiiro(){
+        for (int i = 0; i < adas.size(); i++) {
+            System.out.println(?);
+        }
+    }
 
 }
