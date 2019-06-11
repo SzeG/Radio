@@ -5,10 +5,7 @@
  */
 package javaapplication151;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+
 
 /**
  *
@@ -20,8 +17,9 @@ public class JavaApplication151 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
-        
+        ZeneiEljaras ze=new ZeneiEljaras();
+        ze.betoltes();
+        ze.összkiiro();
     }
     
 }
