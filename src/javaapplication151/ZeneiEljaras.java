@@ -42,7 +42,7 @@ public class ZeneiEljaras {
                 String[] szamok = beolv.split(" ");
                 String[] cim = beolv.split(":");
                 String[] eloado = cim[0].split(" ");
-                ZeneiAgy za = new ZeneiAgy(Integer.parseInt(szamok[0]), Integer.parseInt(szamok[1]) * 60 + Integer.parseInt(szamok[2]),eloado[3]/*osszefuzo(eloado)*/, cim[1], kezdesekbeall );
+                ZeneiAgy za = new ZeneiAgy(Integer.parseInt(szamok[0]), Integer.parseInt(szamok[1]) * 60 + Integer.parseInt(szamok[2]),osszefuzo(eloado), cim[1], Integer.parseInt(szamok[0]));
                 adas.add(za);
             }
             buta.close();
@@ -58,21 +58,27 @@ public class ZeneiEljaras {
             System.out.println(adas.get(i).toString());
         }
     }
-    /*public String osszefuzo(String[] eloado){
-        if (eloado[4]==null) {
-        return eloado[3];
+    public String osszefuzo(String[] eloado){
+        
+        if (eloado.length==5) {
+        return eloado[3].concat(" "+eloado[4]);
         }else{
-        return eloado[3].concat(eloado[4]);
+        return eloado[3];
+        }
+     
+    }
+    public void kezdesekbeall(){
+        for (int i = 0; i < adas.size(); i++) {
+            switch(getAdo[i]){
+            case 1:
+                setKezdido(5);
+            case 2:
+                
+            case 3:    
+        
+        }
         }
         
-    }*/
-    /*public void kezdesekbeall(){
-        for (int i = 0; i < adas.size(); i++) {
-            if () {
-                
-               
-            }
-        }
-    }*/
+    }
   
 }

@@ -20,6 +20,7 @@ public class JavaApplication151 {
         ZeneiEljaras ze=new ZeneiEljaras();
         ze.betoltes();
         ze.összkiiro();
+        //ze.kezdesekbeall();
     }
     
 }
