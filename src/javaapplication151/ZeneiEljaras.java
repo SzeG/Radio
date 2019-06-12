@@ -67,8 +67,18 @@ public class ZeneiEljaras {
         }
      
     }
-    /*public void kezdesekbeall(){
+    public void kezdesekbeall(){
+        for (int i = 0; i < adas.size(); i++) {
+            switch(getAdo[i]){
+            case 1:
+                setKezdido(5);
+            case 2:
+                
+            case 3:    
         
-    }*/
+        }
+        }
+        
+    }
   
 }
