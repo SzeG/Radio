@@ -68,15 +68,24 @@ public class ZeneiEljaras {
      
     }
     public void kezdesekbeall(){
+        Integer egyes=0;
+        Integer kettes=0;
+        Integer harmas=0;
         for (int i = 0; i < adas.size(); i++) {
-            switch(getAdo[i]){
-            case 1:
-                setKezdido(5);
-            case 2:
-                
-            case 3:    
-        
-        }
+            
+            if (adas.get(i).getAdo()==1) {
+                egyes=egyes+adas.get(i).getIdotartam();
+                adas.get(i).setKezdido(egyes);
+
+            }
+            if (adas.get(i).getAdo()==2) {
+                kettes=kettes+adas.get(i).getIdotartam();
+                adas.get(i).setKezdido(kettes);
+            }
+            if (adas.get(i).getAdo()==3) {
+                harmas=harmas+adas.get(i).getIdotartam();
+                adas.get(i).setKezdido(harmas);
+            }
         }
         
     }
