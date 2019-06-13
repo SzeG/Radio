@@ -19,8 +19,8 @@ public class JavaApplication151 {
     public static void main(String[] args) {
         ZeneiEljaras ze=new ZeneiEljaras();
         ze.betoltes();
+        ze.kezdesekbeall();
         ze.összkiiro();
-        //ze.kezdesekbeall();
     }
     
 }
