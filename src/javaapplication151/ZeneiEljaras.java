@@ -42,7 +42,7 @@ public class ZeneiEljaras {
                 String[] szamok = beolv.split(" ");
                 String[] cim = beolv.split(":");
                 String[] eloado = cim[0].split(" ");
-                ZeneiAgy za = new ZeneiAgy(Integer.parseInt(szamok[0]), Integer.parseInt(szamok[1]) * 60 + Integer.parseInt(szamok[2]),osszefuzo(eloado), cim[1], Integer.parseInt(szamok[0]));
+                ZeneiAgy za = new ZeneiAgy(Integer.parseInt(szamok[0]), Integer.parseInt(szamok[1]) * 60 + Integer.parseInt(szamok[2]), osszefuzo(eloado), cim[1], Integer.parseInt(szamok[0]));
                 adas.add(za);
             }
             buta.close();
@@ -53,41 +53,90 @@ public class ZeneiEljaras {
         }
 
     }
-    public void összkiiro(){
+
+    public void összkiiro() {
         for (int i = 0; i < adas.size(); i++) {
             System.out.println(adas.get(i).toString());
         }
     }
-    public String osszefuzo(String[] eloado){
-        
-        if (eloado.length==5) {
-        return eloado[3].concat(" "+eloado[4]);
-        }else{
-        return eloado[3];
+
+    public String osszefuzo(String[] eloado) {
+
+        if (eloado.length == 5) {
+            return eloado[3].concat(" " + eloado[4]);
+        } else {
+            return eloado[3];
         }
-     
+
     }
-    public void kezdesekbeall(){
-        Integer egyes=0;
-        Integer kettes=0;
-        Integer harmas=0;
+
+    public void kezdesekbeall() {
+        Integer egyes = 0;
+        Integer kettes = 0;
+        Integer harmas = 0;
         for (int i = 0; i < adas.size(); i++) {
-            
-            if (adas.get(i).getAdo()==1) {
-                egyes=egyes+adas.get(i).getIdotartam();
+
+            if (adas.get(i).getAdo() == 1) {
+                egyes = egyes + adas.get(i).getIdotartam();
                 adas.get(i).setKezdido(egyes);
 
             }
-            if (adas.get(i).getAdo()==2) {
-                kettes=kettes+adas.get(i).getIdotartam();
+            if (adas.get(i).getAdo() == 2) {
+                kettes = kettes + adas.get(i).getIdotartam();
                 adas.get(i).setKezdido(kettes);
             }
-            if (adas.get(i).getAdo()==3) {
-                harmas=harmas+adas.get(i).getIdotartam();
+            if (adas.get(i).getAdo() == 3) {
+                harmas = harmas + adas.get(i).getIdotartam();
                 adas.get(i).setKezdido(harmas);
             }
         }
-        
+
     }
-  
+
+    public void adasszamolo() {
+        Integer egyes = 0;
+        Integer kettes = 0;
+        Integer harmas = 0;
+        for (int i = 0; i < adas.size(); i++) {
+
+            if (adas.get(i).getAdo() == 1) {
+                egyes++;
+            }
+            if (adas.get(i).getAdo() == 2) {
+                kettes++;
+            }
+            if (adas.get(i).getAdo() == 3) {
+                harmas++;
+            }
+        }
+        System.out.println("Az egyes adón "+egyes+"db szám, a kettes adón "+kettes+"db szám, a hármas adón "+harmas+" db szám hangzott el az adás folyamán.");
+    }
+    public void claptonokkozott(){
+        Integer eleje=0;
+        Integer vege=0;
+        Integer osszeg=0;
+        Integer orak;
+        Integer percek;
+                
+        for (int i = 0; i < adas.size(); i++) {
+            if (adas.get(i).getAdo()==1 && adas.get(i).getEloado().equals("Eric Clapton")) {
+                eleje=adas.get(i).getKezdido();
+                break;
+            }
+        }
+        for (int i = adas.size()-1; i > 0; i--) {
+            if (adas.get(i).getAdo()==1 && adas.get(i).getEloado().equals("Eric Clapton")) {
+                vege=adas.get(i).getKezdido();
+                break;
+            }
+        }
+        osszeg=(vege-eleje);
+        orak=osszeg/3600;
+        osszeg=osszeg%3600;
+        percek=osszeg/60;
+        osszeg=osszeg%60;
+        System.out.println("A két Eric Clapton szám között "+orak+":"+percek+":"+osszeg+" idő telt el.");
+    }
+    
+
 }
