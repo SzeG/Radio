@@ -20,7 +20,10 @@ public class JavaApplication151 {
         ZeneiEljaras ze=new ZeneiEljaras();
         ze.betoltes();
         ze.kezdesekbeall();
-        ze.összkiiro();
+        System.out.println("Második feladat:");
+        ze.adasszamolo();
+        System.out.println("Harmadik feladat:");
+        ze.claptonokkozott();
     }
     
 }
