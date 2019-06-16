@@ -19,15 +19,8 @@ public class JavaApplication151 {
     public static void main(String[] args) {
         ZeneiEljaras ze=new ZeneiEljaras();
         ze.betoltes();
-        ze.kezdesekbeall();
-        System.out.println("Második feladat:");
-        ze.adasszamolo();
-        System.out.println("Harmadik feladat:");
-        ze.claptonokkozott();
-        System.out.println("Negyedik feladat:");
-        ze.omlegkereses();
-        System.out.println("Ötödik feladat:");
-        ze.gaoafkereses();
+        ze.összkiiro();
+        //ze.kezdesekbeall();
     }
     
 }
