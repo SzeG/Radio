@@ -137,6 +137,41 @@ public class ZeneiEljaras {
         osszeg=osszeg%60;
         System.out.println("A két Eric Clapton szám között "+orak+":"+percek+":"+osszeg+" idő telt el.");
     }
+    public void omlegkereses(){
+        Integer omlegado=0;
+        Integer omlegido=0;
+        Integer masikado=0;
+        String masikeloado=null;
+        String masikcim=null;
+        Integer utolsoado=0;
+        String utolsoeloado=null;
+        String utolsocim=null;
+        for (int i = 0; i < adas.size(); i++) {
+            if (adas.get(i).getCim()=="Legenda" && adas.get(i).getEloado()=="Omega") {
+                omlegido=adas.get(i).getKezdido();
+                omlegado=adas.get(i).getAdo();
+                break;
+            }
+        }
+        
+        for (int i = adas.size()-1; i > 0; i--) {
+            if (adas.get(i).getAdo()!=omlegado && adas.get(i).getKezdido()<omlegido) {
+                masikado=adas.get(i).getAdo();
+                masikeloado=adas.get(i).getEloado();
+                masikcim=adas.get(i).getCim();
+                break;
+            }
+        }
+        utolsoado= 6-(omlegado+masikado);
+        for (int i = adas.size()-1; i > 0; i--) {
+            if (adas.get(i).getAdo()==utolsoado && adas.get(i).getKezdido()<omlegido) {
+                utolsoeloado=adas.get(i).getEloado();
+                utolsocim=adas.get(i).getCim();
+                break;
+            }
+        }
+        System.out.println("Mikor Eszter elkapcsolt, a "+masikado+". adón "+masikeloado+": "+masikcim+" szólt, a "+utolsoado+". adón pedig "+utolsoeloado+": "+utolsocim+" szólt.");
+    }
     
 
 }
