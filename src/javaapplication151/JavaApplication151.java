@@ -26,6 +26,8 @@ public class JavaApplication151 {
         ze.claptonokkozott();
         System.out.println("Negyedik feladat:");
         ze.omlegkereses();
+        System.out.println("Ötödik feladat:");
+        ze.gaoafkereses();
     }
     
 }
