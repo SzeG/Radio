@@ -24,6 +24,8 @@ public class JavaApplication151 {
         ze.adasszamolo();
         System.out.println("Harmadik feladat:");
         ze.claptonokkozott();
+        System.out.println("Negyedik feladat:");
+        ze.omlegkereses();
     }
     
 }
