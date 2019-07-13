@@ -200,13 +200,14 @@ public class ZeneiEljaras {
         String talalat;
         String eloadocim;
         for (int i = 0; i < adas.size(); i++) {
-            eloadocim = adas.get(i).getEloado().concat(adas.get(i).getCim());
+            eloadocim = (adas.get(i).getEloado().concat(adas.get(i).getCim())).toLowerCase();
             if (eloadocim.contains(keresendo)) {
                 talalat = adas.get(i).getEloado().concat(": " + adas.get(i).getCim());
                 keres.add(talalat);
             }
-        }
+        } 
         ze.fajliro(keres);
+        
     }
 
 }
