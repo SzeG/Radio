@@ -205,8 +205,9 @@ public class ZeneiEljaras {
                 talalat = adas.get(i).getEloado().concat(": " + adas.get(i).getCim());
                 keres.add(talalat);
             }
-        }
+        } 
         ze.fajliro(keres);
+        
     }
 
 }
